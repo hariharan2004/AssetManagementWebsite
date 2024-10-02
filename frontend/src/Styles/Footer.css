@@ -1,0 +1,52 @@
+/* Wrap the entire content */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the page takes full height */
+}
+
+/* Main content (vaults) should grow to take up available space */
+.main-content {
+  flex: 1; /* This allows the content to fill the remaining space */
+}
+
+.footer {
+  background-color: #111;
+  color: #fff;
+  border-top: 1px solid #aaa;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%; /* Ensure the footer stretches across the width of the page */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #00BFFF;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  color: #FF6F61;
+}
+
+.footer-links span {
+  color: #bbb;
+}

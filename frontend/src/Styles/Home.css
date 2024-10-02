@@ -1,0 +1,238 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto; /* Ensure the body height isn't stretched */
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #fff;
+  margin: 0; /* Remove default margin */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Home Component Styles */
+.home-section {
+  padding-top: 20px; /* Adjusted padding */
+  margin: 0; 
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  height: calc(100vh - 20px); /* Adjusted for header height */
+  padding: 60px 20px;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+}
+
+.hero-content {
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  max-width: 1200px; /* Adjust based on design */
+  margin: 0 auto;
+}
+
+/* Text and Image side by side */
+.hero-text {
+  width:50%; /* Fixed width for text */
+  margin-right: 40px; /* Space between text and image */
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: "Pridi", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #33FF00; /* Updated color for heading */
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #FFBF00, #FF6F00);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}
+
+/* Image Styling */
+.hero-image {
+  width: 400px; /* Fixed width for image */
+}
+
+.hero-image img {
+  width: 100%; /* Image takes full width of its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.trade-now,
+.whitepaper {
+  background: linear-gradient(90deg, #FF6F61, #00BFFF); /* Gradient background */
+  color: black; /* Text color (black) */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  position: relative; /* Position for pseudo-element */
+  overflow: hidden; /* Ensure contents do not overflow */
+  text-decoration: none; /* No underline */
+}
+.trade-now:hover,.whitepaper:hover {
+  background: linear-gradient(90deg,#00BFFF,#FF6F61); /* Reverse the gradient on hover */
+}
+
+
+@keyframes border-animation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+
+/* Roadmap Section */
+.roadmap {
+  position: relative;
+  padding: 50px 0;
+  margin-bottom: 0;
+  background-color: #000;
+}
+
+.roadmap-container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.roadmap-item {
+  display: flex;
+  position: relative;
+  margin-bottom: 50px;
+  align-items: center; /* Align content vertically centered */
+}
+#heading-roadmap
+{
+  text-align: center;
+  align-items: center;
+}
+.roadmap-item.left {
+  justify-content: flex-end; /* Align left items to the right */
+}
+
+.roadmap-item.right {
+  justify-content: flex-start; /* Align right items to the left */
+}
+
+.roadmap-content {
+  padding: 20px;
+  border-radius: 8px;
+  width: 45%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the title vertically */
+}
+
+/* Align title on the same line as the dot */
+.roadmap-content h3 {
+  margin: 0; /* Ensure there's no margin for better alignment */
+  font-size: 24px;
+  line-height: 1; /* Remove extra spacing around text */
+}
+
+.dot-completed {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #FF6F00;
+  border-radius: 50%;
+  top: 50%; /* Center it vertically */
+  transform: translateY(-50%); /* Adjust for the dot's height */
+  left: calc(50% - 10px); /* Center the dot horizontally on the line */
+  z-index: 1;
+}
+.dot-inprogress {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border: 1px solid #FF6F00;
+  border-radius: 50%;
+  top: 50%; /* Center it vertically */
+  transform: translateY(-50%); /* Adjust for the dot's height */
+  left: calc(50% - 10px); /* Center the dot horizontally on the line */
+  z-index: 1;
+}
+
+/* Line through the middle */
+.roadmap-container:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px; /* Line thickness */
+  background-color: #FF6F00;
+  z-index: 0; /* Behind the dot and content */
+}
+
+/* Title and description styles */
+.roadmap-content h3 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.roadmap-content p {
+  font-size: 16px;
+  color: #aaa;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 60px 0;
+  margin-bottom: 0; 
+  background-color: #111; /* Same background as hero section */
+  color: #fff;
+  text-align: center; /* Center align titles */
+}
+
+.faq-section h2 {
+  
+  font-size: 32px;
+  color: #33FF00; /* Consistent with the Hero title */
+  margin-bottom: 40px;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  text-align: left; /* Align text to the left */
+}
+
+.faq-item h3 {
+  font-size: 24px;
+  color: #FF6F00;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 16px;
+  color: #aaa;
+  line-height: 1.6;
+}

@@ -1,0 +1,53 @@
+/* App.css */
+
+/* Make sure the page wrapper takes the full height of the viewport */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* The main content should take up any remaining space */
+.main-content {
+  flex: 1; /* Grow to fill space */
+}
+
+/* Footer styles as previously mentioned */
+.footer {
+  background-color: #111;
+  color: #fff;
+  border-top: 1px solid #aaa;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #00BFFF;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  color: #FF6F61;
+}
+
+.footer-links span {
+  color: #bbb;
+}
