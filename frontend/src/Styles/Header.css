@@ -183,3 +183,40 @@
 .wallet-dropdown button:hover {
   background-color: #555; /* Change color on hover */
 }
+
+/* Existing styles here... */
+
+.hamburger {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Styles for the navbar */
+@media (max-width: 768px) {
+  .navbar{
+    width: 100vw;
+  }
+  .navbar nav ul {
+    display: none; /* Hide the menu by default */
+    flex-direction: column; /* Stack vertically */
+    background-color: #111; /* Match navbar background */
+    position: absolute; /* Position it absolutely */
+    top: 100%; /* Position it below the navbar */
+    left: 0;
+    right: 0;
+    z-index: 999; /* Ensure it stays above other elements */
+  }
+
+  .navbar nav.open ul {
+    display: flex; /* Show menu when open */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon on mobile */
+  }
+}
+

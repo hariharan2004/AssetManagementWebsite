@@ -62,20 +62,6 @@
   gap: 20px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .vault-detail-container {
-    flex-direction: column; /* Stack the left and right boxes vertically on smaller screens */
-  }
-
-  .left-empty-box, .vault-content {
-    flex-basis: 100%; /* Take full width on smaller screens */
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-}
-
-
 /* Vault Info Box */
 .vault-info {
   flex: 1;
@@ -137,9 +123,6 @@
   border: none;
 }
 
-.currency-label {
-  margin-left: 10px;
-}
 
 .balance-container {
   display: flex;
@@ -238,17 +221,29 @@
   font-weight: bold;
   margin-bottom: 10px;
 }
-
-/* Responsive adjustments for main-second */
+/* Responsive adjustments */
+/* Responsive adjustments */
+/* Responsive adjustments */
+/* Updated Responsive Adjustments for Mobile */
 @media (max-width: 768px) {
-  .main-second {
-    grid-template-columns: 1fr; /* Stack on smaller screens */
-    margin: 20px;
+  .vault-detail-container {
+    display: flex;
+    flex-direction: column;
   }
-
-  .main-second .left-empty-box,
-  .transaction-details {
-    width: 100%; /* Ensure full width on small screens */
+  .main-second{
+    display: flex;
+    min-height: 350px;
+  }
+  .transaction-details{
+    display: none;
+  }
+  .left-empty-box{
+    background-color: #333;
+    min-height: 350px;
+    border-radius: 8px;
+  }
+  .vault-content{
+    padding: 0;
   }
 }
 

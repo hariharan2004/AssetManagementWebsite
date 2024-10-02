@@ -160,16 +160,33 @@
 
 /* Responsive Styling */
 @media (max-width: 768px) {
+  .portfolio-title h2{
+    text-align: center;
+    align-items: center;
+  }
   .portfolio-detail-container,
   .main-second {
     grid-template-columns: 1fr;
     gap: 20px;
     margin: 20px;
+    margin-bottom: 0;
+  }
+  .portfolio-content{
+    padding: 0;
   }
 
   .portfolio-left-empty-box,
-  .portfolio-content,
-  .portfolio-transaction-details {
-    width: 100%;
+  .portfolio-content{
+    width: 90%;
+    border-radius: 20px;
+    min-height: 300px;
+  }
+  .portfolio-transaction-details{
+    display: none;
+  }
+  .portfolio-main-second{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
   }
 }

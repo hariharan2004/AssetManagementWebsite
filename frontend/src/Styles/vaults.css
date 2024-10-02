@@ -79,3 +79,48 @@ p {
 .vault-details:nth-of-type(1) {
   margin-bottom: 5px; /* Space between the two detail sections */
 }
+
+/* Add the following to your existing vaults.css */
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .vaults-container {
+    grid-template-columns: 1fr; /* 1 vault per row on small screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin: 0; /* Remove margin to use full width */
+    margin-top: 50px; /* Add top margin for space between header and first vault */
+  }
+
+  .vault-card {
+    width: auto; /* Allow vault cards to take full width */
+    padding: 15px; /* Reduce padding for better spacing */
+    margin: 10px 0; /* Add margin for space between cards */
+  }
+
+  .vault-header {
+    justify-content: flex-start; /* Align logo and name to the left */
+  }
+
+  .vault-name {
+    font-size: 1rem; /* Reduce font size for smaller screens */
+    text-align: left; /* Align text to the left */
+  }
+
+  .vault-stats p,
+  .vault-values p {
+    font-size: 0.9rem; /* Smaller font size for stats and values */
+  }
+}
+
+/* Ensure the header takes proper space */
+.header {
+  height: auto; /* Ensure header adjusts height dynamically */
+  padding: 10px; /* Add padding if needed */
+}
+
+/* Additional styles to make sure content doesn't overflow */
+.vault-card {
+  overflow: visible; /* Prevent content overflow */
+  min-height: 200px; /* Set a minimum height for cards */
+}
+
