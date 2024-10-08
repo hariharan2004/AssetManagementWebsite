@@ -85,6 +85,9 @@ const Header = () => {
               <ul className="dropdown-menu">
                 <li><Link to="/retailers/vaults" onClick={handleMenuItemClick}>Vaults</Link></li>
                 <li><Link to="/retailers/portfolio" onClick={handleMenuItemClick}>Portfolio</Link></li>
+                {window.innerWidth >= 780 && (
+                  <li><Link to="/retailers/dashboard/profile" onClick={handleMenuItemClick}>Dashboard</Link></li>
+                )}
               </ul>
             )}
           </li>
@@ -96,6 +99,9 @@ const Header = () => {
           </li>
           <li className={location.pathname === '/institutions' ? 'active' : ''}>
             <Link to="/" onClick={handleMenuItemClick}>INSTITUTIONS</Link>
+          </li>
+          <li className={location.pathname === '/roadmap' ? 'active' : ''}>
+            <Link to="/retailers/roadmap" onClick={handleMenuItemClick}>ROADMAP</Link>
           </li>
           <li onClick={() => { scrollToFAQ(); handleMenuItemClick(); }} style={{ cursor: 'pointer' }}>
             FAQ

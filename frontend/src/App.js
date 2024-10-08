@@ -11,6 +11,7 @@ import DashboardLayout from './Components/DashboardLayout';
 import DashboardLayoutPort from './Components/DashboardLayoutPort';
 import DashboardLayoutTransaction from './Components/DashboardLayoutTransaction';
 import DashboardLayoutProfile from './Components/DasboardLayoutProfile';
+import Roadmap from './Components/Roadmap';
 function App() {
   return (
     <div className="page-wrapper"> {/* Wrapper for flex layout */}
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/retailers/vaults" element={<Vaults />} />
             <Route path="/retailers/portfolio" element={<Portfolio />} />
+            <Route path="/retailers/roadmap" element={<Roadmap />} />
             <Route path='/retailers/dashboard/profile' element={<DashboardLayoutProfile />} />
             <Route path='/retailers/dashboard/vault' element={<DashboardLayout />} />
             <Route path='/retailers/dashboard/portfolio' element={<DashboardLayoutPort />} />

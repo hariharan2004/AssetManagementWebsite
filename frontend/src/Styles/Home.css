@@ -90,6 +90,51 @@ body {
   background: linear-gradient(90deg,#00BFFF,#FF6F61); /* Reverse the gradient on hover */
 }
 
+/* Key Features Section */
+.home-key-features {
+  padding: 40px 20px;
+  margin: 0px 50px;
+  background-color: #000; /* Dark background for contrast */
+  color: #fff; /* White text for readability */
+  text-align: center; /* Center align text */
+}
+
+.home-key-features-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+  justify-content: center; /* Center items horizontally */
+}
+
+.key-feature-item {
+  flex: 0 1 45%; /* Adjust width to fit two items per row */
+  margin: 20px; /* Space around each feature box */
+  padding: 20px; /* Inner padding for feature boxes */
+  border: 1px solid #00FF44; /* Optional border for aesthetics */
+  border-radius: 8px; /* Rounded corners */
+  background: rgba(0, 255, 68, 0.1); /* Light green background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+.home-featuredvaults-heading,.home-keyfeatures-heading{
+  text-align: center;
+  align-items: center;
+  font-size: 24px;
+  color: #00FF44;
+}
+
+.feature-image {
+  max-width: 100px; /* Adjust size as needed */
+  margin-bottom: 10px;
+}
+.home-top-vaults{
+  margin-bottom: 100px;
+}
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .key-feature-item {
+    flex: 1 1 100%; /* Full width on smaller screens */
+  }
+}
+
 
 @keyframes border-animation {
   0% {
@@ -98,105 +143,6 @@ body {
   100% {
     background-position: 200%;
   }
-}
-
-
-/* Roadmap Section */
-.roadmap {
-  position: relative;
-  padding: 50px 0;
-  margin-bottom: 0;
-  background-color: #000;
-}
-
-.roadmap-container {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.roadmap-item {
-  display: flex;
-  position: relative;
-  margin-bottom: 50px;
-  align-items: center; /* Align content vertically centered */
-}
-#heading-roadmap
-{
-  text-align: center;
-  align-items: center;
-}
-.roadmap-item.left {
-  justify-content: flex-end; /* Align left items to the right */
-}
-
-.roadmap-item.right {
-  justify-content: flex-start; /* Align right items to the left */
-}
-
-.roadmap-content {
-  padding: 20px;
-  border-radius: 8px;
-  width: 45%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center the title vertically */
-}
-
-/* Align title on the same line as the dot */
-.roadmap-content h3 {
-  margin: 0; /* Ensure there's no margin for better alignment */
-  font-size: 24px;
-  line-height: 1; /* Remove extra spacing around text */
-}
-
-.dot-completed {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #FF6F00;
-  border-radius: 50%;
-  top: 50%; /* Center it vertically */
-  transform: translateY(-50%); /* Adjust for the dot's height */
-  left: calc(50% - 10px); /* Center the dot horizontally on the line */
-  z-index: 1;
-}
-.dot-inprogress {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: black;
-  border: 1px solid #FF6F00;
-  border-radius: 50%;
-  top: 50%; /* Center it vertically */
-  transform: translateY(-50%); /* Adjust for the dot's height */
-  left: calc(50% - 10px); /* Center the dot horizontally on the line */
-  z-index: 1;
-}
-
-/* Line through the middle */
-.roadmap-container:before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 2px; /* Line thickness */
-  background-color: #FF6F00;
-  z-index: 0; /* Behind the dot and content */
-}
-
-/* Title and description styles */
-.roadmap-content h3 {
-  color: #fff;
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.roadmap-content p {
-  font-size: 16px;
-  color: #aaa;
 }
 
 /* FAQ Section */

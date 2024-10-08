@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-links">
           <a href="https://x.com/lazarusfinance" target="_blank" rel="noopener noreferrer">Twitter</a>
           <span> · </span>
-          <a href="https://discord.com/" target="_blank" rel="noopener noreferrer">Discord</a>
+          <a href="https://discord.gg/W5AAG9GM" target="_blank" rel="noopener noreferrer">Discord</a>
           <span> · </span>
           <a href="https://telegram.org/lazarus_finance" target="_blank" rel="noopener noreferrer">Telegram</a>
         </div>

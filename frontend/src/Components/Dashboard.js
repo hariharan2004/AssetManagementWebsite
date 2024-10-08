@@ -7,7 +7,6 @@ import phoenixlogo from '../Icons/phoenix-logo.png';
 import vaultlogo from '../Icons/vault.png';
 import portfoliologo from '../Icons/portfolio.png';
 import historylogo from '../Icons/history.png';
-import faqlogo from '../Icons/faq.png';
 
 const Dashboard = () => {
   return (
@@ -28,9 +27,6 @@ const Dashboard = () => {
           </Link>
           <Link to="/retailers/dashboard/history">
             <img src={historylogo} alt="History" className="clickable-logo" />
-          </Link>
-          <Link to="/retailers/dashboard/profile">
-            <img src={faqlogo} alt="FAQ" className="clickable-logo" />
           </Link>
         </div>
       </div>

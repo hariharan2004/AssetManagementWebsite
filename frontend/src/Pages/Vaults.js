@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 import '../Styles/vaults.css'; // Ensure you have the CSS file updated
 import bitcoinLogo from '../Icons/bitcoin.png';
 import ethereumLogo from '../Icons/etherum.png'; 
@@ -69,10 +69,10 @@ const vaultData = [
   // Add more vaults as needed
 ];
 
-const Vaults = () => {
+const Vaults = ({ count = 6 }) => { // Default to 6 if no count is provided
   return (
     <div className="vaults-container">
-      {vaultData.map((vault, index) => (
+      {vaultData.slice(0, count).map((vault, index) => (
         <Link 
           to={`/vault/${vault.name.replace('/', '').toLowerCase()}`} 
           key={index} 
